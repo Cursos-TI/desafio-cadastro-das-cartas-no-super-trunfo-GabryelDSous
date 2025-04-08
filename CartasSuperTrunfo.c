@@ -52,6 +52,9 @@ void main(){
     // calculando o PIB per capita da carta 01
     double pibPerCapitaUm = (pibUm * 1000000000) / populacaoUm;
 
+    // Calcular Super poder
+    float superPoderUm = populacaoUm + areaUm + pibUm + pibPerCapitaUm + (1 / pontosTuristicosUm);
+
 
     printf("=========================================\n");
 
@@ -103,6 +106,9 @@ void main(){
     // calculando o PIB per capita da carta 02
     double pibPerCapitaDois = (pibDois * 1000000000) / populacaoDois;
 
+    // Calcular Super poder
+    float superPoderDois = populacaoUm + areaUm + pibUm + pibPerCapitaUm + (1 / pontosTuristicosUm);
+
     // visualizar resultado
 
     // Carta Um
@@ -128,4 +134,13 @@ void main(){
     printf("A quantidade de pontos turísticos na cidade: %d\n", pontosTuristicosDois);
     printf("A Densidade Populacional da cidade: %.2lf hab/km²\n", densidadePopulacionalDois);
     printf("O PIB per capita da cidade: %.2lf reais\n", pibPerCapitaDois);
+
+    /// COMPARANDO CARTAS
+    printf("\n\nComparação de Cartas:\n");
+    printf("População: Carta %d venceu.\n", populacaoUm > populacaoDois);
+    printf("Área: Carta %d venceu.\n", areaUm > areaDois);
+    printf("PIB: Carta %d venceu.\n", pibUm > pibDois);
+    printf("Pontos Turísticos: Carta %d venceu.\n", pontosTuristicosUm > pontosTuristicosDois);
+    printf("PIB per Capita: Carta %d venceu.\n", pibPerCapitaUm > pibPerCapitaDois);
+    printf("Super Poder: Carta %d venceu.\n", superPoderUm > superPoderDois);
 }

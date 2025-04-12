@@ -136,12 +136,38 @@ void main(){
     printf("O PIB per capita da cidade: %.2lf reais\n", pibPerCapitaDois);
 
     /// COMPARANDO CARTAS
+    printf("1 - População\n");
+    printf("2 - Área\n");
+    printf("3 - PIB\n");
+    printf("4 - Pontos turísticos\n");
+    printf("5 - PIB per Capita\n");
+    printf("6 - Densidade Populacional\n");
+    printf("7 - Super Poder\n");
+    printf("Escolha qual atributo você quer comparar: ")
+    int escolha;
+    scanf("%d", &escolha);
     printf("\n\nComparação de Cartas:\n");
-    printf("População: Carta %d venceu - %d\n", populacaoUm > populacaoDois, (populacaoUm > populacaoDois? populacaoUm : populacaoDois));
-    printf("Área: Carta %d venceu - %lf\n", areaUm > areaDois, (areaUm > areaDois? areaUm : areaDois));
-    printf("PIB: Carta %d venceu - %lf\n", pibUm > pibDois, (pibUm > pibDois? pibUm : pibDois));
-    printf("Pontos Turísticos: Carta %d venceu - %d\n", pontosTuristicosUm > pontosTuristicosDois, (pontosTuristicosUm > pontosTuristicosDois? pontosTuristicosUm : pontosTuristicosDois));
-    printf("PIB per Capita: Carta %d venceu - %lf\n", pibPerCapitaUm > pibPerCapitaDois, (pibPerCapitaUm > pibPerCapitaDois? pibPerCapitaUm : pibPerCapitaDois));
-    printf("Densidade Populacional: Carta %d venceu - %lf\n", densidadePopulacionalUm < densidadePopulacionalDois, (densidadePopulacionalUm < densidadePopulacionalDois? densidadePopulacionalUm : densidadePopulacionalDois));
-    printf("Super Poder: Carta %d venceu. - %f\n", superPoderUm > superPoderDois, (superPoderUm > superPoderDois? superPoderUm : superPoderDois));
+    switch (escolha){
+        case 1:
+            printf("População: Carta %s - %d\n", (populacaoUm>populacaoDois?"Um venceu":populacaoUm<populacaoDois?"Dois venceu":"Empate"), (populacaoUm > populacaoDois?populacaoUm : populacaoDois));
+            break;
+        case 2:
+            printf("Área: Carta %s - %lf\n", (areaUm>areaDois?"Um venceu":populacaoUm<populacaoDois?"Dois venceu":"Empate"), (areaUm > areaDois? areaUm : areaDois));
+            break;
+        case 3:
+            printf("PIB: Carta %s - %lf\n", (pibUm>pibDois?"Um venceu":pibUm<pibDois?"Dois venceu":"Empate"), (pibUm > pibDois? pibUm : pibDois));
+            break;
+        case 4:
+            printf("Pontos Turísticos: Carta %s - %d\n", (pontosTuristicosUm>pontosTuristicosDois?"Um venceu":pontosTuristicosUm<pontosTuristicosDois?"Dois venceu":"Empate"), (pontosTuristicosUm > pontosTuristicosDois? pontosTuristicosUm : pontosTuristicosDois));
+            break;
+        case 5:
+            printf("PIB per Capita: Carta %s - %lf\n", (pibPerCapitaUm>pibPerCapitaDois?"Um venceu":pibPerCapitaUm<pibPerCapitaDois?"Dois venceu":"Empate"), (pibPerCapitaUm > pibPerCapitaDois? pibPerCapitaUm : pibPerCapitaDois));
+            break;
+        case 6:
+            printf("Densidade Populacional: Carta %s - %lf\n", (densidadePopulacionalUm<densidadePopulacionalDois?"Um venceu":densidadePopulacionalUm>densidadePopulacionalDois?"Dois venceu":"Empate"), (densidadePopulacionalUm < densidadePopulacionalDois? densidadePopulacionalUm : densidadePopulacionalDois));
+            break;
+        case 7:
+            printf("Super Poder: Carta %s - %f\n", (superPoderUm>superPoderDois?"Um venceu":superPoderUm<superPoderDois?"Dois venceu":"Empate"), (superPoderUm > superPoderDois? superPoderUm : superPoderDois));
+            break;
+    }
 }

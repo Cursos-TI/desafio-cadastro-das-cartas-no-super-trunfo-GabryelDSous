@@ -107,7 +107,7 @@ void main(){
     double pibPerCapitaDois = (pibDois * 1000000000) / populacaoDois;
 
     // Calcular Super poder
-    float superPoderDois = populacaoUm + areaUm + pibUm + pibPerCapitaUm + (1 / pontosTuristicosUm);
+    float superPoderDois = populacaoDois + areaDois + pibDois + pibPerCapitaDois + (1 / pontosTuristicosDois);
 
     // visualizar resultado
 
@@ -137,10 +137,11 @@ void main(){
 
     /// COMPARANDO CARTAS
     printf("\n\nComparação de Cartas:\n");
-    printf("População: Carta %d venceu.\n", populacaoUm > populacaoDois);
-    printf("Área: Carta %d venceu.\n", areaUm > areaDois);
-    printf("PIB: Carta %d venceu.\n", pibUm > pibDois);
-    printf("Pontos Turísticos: Carta %d venceu.\n", pontosTuristicosUm > pontosTuristicosDois);
-    printf("PIB per Capita: Carta %d venceu.\n", pibPerCapitaUm > pibPerCapitaDois);
-    printf("Super Poder: Carta %d venceu.\n", superPoderUm > superPoderDois);
+    printf("População: Carta %d venceu - %d\n", populacaoUm > populacaoDois, (populacaoUm > populacaoDois? populacaoUm : populacaoDois));
+    printf("Área: Carta %d venceu - %lf\n", areaUm > areaDois, (areaUm > areaDois? areaUm : areaDois));
+    printf("PIB: Carta %d venceu - %lf\n", pibUm > pibDois, (pibUm > pibDois? pibUm : pibDois));
+    printf("Pontos Turísticos: Carta %d venceu - %d\n", pontosTuristicosUm > pontosTuristicosDois, (pontosTuristicosUm > pontosTuristicosDois? pontosTuristicosUm : pontosTuristicosDois));
+    printf("PIB per Capita: Carta %d venceu - %lf\n", pibPerCapitaUm > pibPerCapitaDois, (pibPerCapitaUm > pibPerCapitaDois? pibPerCapitaUm : pibPerCapitaDois));
+    printf("Densidade Populacional: Carta %d venceu - %lf\n", densidadePopulacionalUm < densidadePopulacionalDois, (densidadePopulacionalUm < densidadePopulacionalDois? densidadePopulacionalUm : densidadePopulacionalDois));
+    printf("Super Poder: Carta %d venceu. - %f\n", superPoderUm > superPoderDois, (superPoderUm > superPoderDois? superPoderUm : superPoderDois));
 }
